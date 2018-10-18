@@ -10,6 +10,8 @@ no_arg <- function(){                                                           
   clean_data <- clean_data[!(clean_data$NAME=="United States" | clean_data$NAME=="Puerto Rico Commonwealth"),]   #Removing the first and last entries, i.e., just keeping the states.
 }
 
+clean_data <- raw_data
+
 dfStates <- no_arg()                                                                                             #Catching the clean_data from the function in dfStates
 arrest <- USArrests
 merged <- merge(dfStates, arrest, by.x="NAME", by.y="row.names", all=TRUE)                                       #Merging the 2 data sets into one. The state names for both the data sets are in 'NAME' for the 1st and are row names for the 2nd.So we combine/merge the data sets by those 2 columns.
