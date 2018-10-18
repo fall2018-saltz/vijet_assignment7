@@ -23,6 +23,9 @@ merged["state_low"] <- tolower(merged$NAME)                                     
 #Step B: Generate a color coded map:
 
 usa <- map_data("state")                                                                                        #Loading the map data for the states in USA in the variable 'usa'                      
+#Before I start plotting, I feel the need to explain the role of 'ggplot'. It is essentially a way of filling up a 'blueprint'. Irrespective of the type of the plot, 'ggplot' will always be called
+#ggplot takes the data frame to be plotted as an argument. In addition to that there is an 'aes' aspect to it(aesthetics). It handles what the plot will look as per, i.e. the values to be plotted and where 
+#to plot them. The functions in addition to ggplot and following it define the type of plot (like histogram, box plot and scatter plot in our case).
 map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$starea) + expand_limits(x=usa$long,y=usa$lat) + coord_map()
 map1
 #------------------------------------------------------------------------------------------------------
