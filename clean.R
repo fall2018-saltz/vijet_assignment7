@@ -36,6 +36,7 @@ map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$star
 map1
 #------------------------------------------------------------------------------------------------------
 #Step C: Create a color coded map of the U.S. on the Murder Rate for each state:
+
 map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()   
 #Same as earlier, except now the map is filled or color coded on the basis of Murder rates.
 
@@ -46,6 +47,7 @@ map3 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa) + expand_limits
 
 map3
 #------------------------------------------------------------------------------------------------------
+#Step D: Zoom the map:
 nyc <- geocode(source="dsk","new york city,new york")                                                            #Importing the co-ordinates(longitude and lattitude) for New York City from data science toolkit using geocode function.
 map4 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill="dark red") + xlim(nyc$lon-10,nyc$lon+10) + ylim(nyc$lat-10,nyc$lat+10) +coord_map()
 map4
