@@ -7,16 +7,6 @@
         {
             "ports": [
                 {
-                    "input": "raw_data",
-                    "type": "csv"
-                }
-            ],
-            "source": "raw_data.csv",
-            "target": "clean.R"
-        },
-        {
-            "ports": [
-                {
                     "output": "clean_data",
                     "type": "csv"
                 }
@@ -63,6 +53,16 @@
             ],
             "source": "clean.R",
             "target": "map4.png"
+        },
+        {
+            "ports": [
+                {
+                    "input": "scprc_est_2017_18_pop_res.csv",
+                    "type": "csv"
+                }
+            ],
+            "source": "raw_data.csv",
+            "target": "clean.R"
         }
     ],
     "nodes": [
@@ -70,7 +70,9 @@
             "name": "raw_data.csv"
         },
         {
-            "name": "clean.R"
+            "assigned_to": "vijetmuley",
+            "name": "clean.R",
+            "task_status": "in progress"
         },
         {
             "name": "data.csv"
@@ -88,6 +90,6 @@
             "name": "map4.png"
         }
     ],
-    "updated_at": "2018-10-18 03:17:39",
+    "updated_at": "2018-10-18 03:21:04",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
