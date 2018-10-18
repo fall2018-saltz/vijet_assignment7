@@ -43,6 +43,16 @@
             ],
             "source": "clean.R",
             "target": "map2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map3",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "map3.png"
         }
     ],
     "nodes": [
@@ -65,6 +75,6 @@
             "name": "map3.png"
         }
     ],
-    "updated_at": "2018-10-18 03:17:17",
+    "updated_at": "2018-10-18 03:17:26",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
