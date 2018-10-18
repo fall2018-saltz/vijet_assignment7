@@ -7,16 +7,6 @@
         {
             "ports": [
                 {
-                    "output": "clean_data",
-                    "type": "csv"
-                }
-            ],
-            "source": "clean.R",
-            "target": "data.csv"
-        },
-        {
-            "ports": [
-                {
                     "output": "map1",
                     "type": "png"
                 }
@@ -75,9 +65,6 @@
             "task_status": "in progress"
         },
         {
-            "name": "data.csv"
-        },
-        {
             "name": "map1.png"
         },
         {
@@ -90,6 +77,6 @@
             "name": "map4.png"
         }
     ],
-    "updated_at": "2018-10-18 15:08:10",
+    "updated_at": "2018-10-18 15:13:24",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
