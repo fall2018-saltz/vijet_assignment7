@@ -3,6 +3,7 @@ library(ggplot2)
 library(maps)
 library(ggmap)
 #------------------------------------------------------------------------------------------------------
+#Step A: Loading and Merging Datasets:
 no_arg <- function(){                                                                                            #Creating a function to make sure that all the columns except those mentioned in the vector 'drop' are retained from the data frame. The ones that are in drop, those columns are dropped for all rows in the data frame.
   clean_data <- raw_data                     
   clean_data <- clean_data[!(clean_data$NAME=="United States" | clean_data$NAME=="Puerto Rico Commonwealth"),]   #Removing the first and last entries, i.e., just keeping the states.
