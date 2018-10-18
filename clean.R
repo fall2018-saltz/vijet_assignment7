@@ -42,8 +42,9 @@ map2
 #------------------------------------------------------------------------------------------------------
 map3 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa) + expand_limits(x=usa$long, y=usa$lat) + geom_point(aes(x=merged$center_x,y=merged$center_y,color="red",size=merged$POPESTIMATE2017)) + coord_map()
 #Same as before,however, there is no fill now. But we are plotting points at the center of each state and the size of each point depends on the population of that state.
+
 map3
 #------------------------------------------------------------------------------------------------------
-nyc <- geocode(source="dsk","new york city,new york")
+nyc <- geocode(source="dsk","new york city,new york")                                                            #Importing the co-ordinates(longitude and lattitude) for New York City from data science toolkit using geocode function.
 map4 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill="dark red") + xlim(nyc$lon-10,nyc$lon+10) + ylim(nyc$lat-10,nyc$lat+10) +coord_map()
 map4
