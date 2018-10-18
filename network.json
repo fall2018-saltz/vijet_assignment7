@@ -1,0 +1,41 @@
+{
+    "collaborators": [
+        "vijetmuley"
+    ],
+    "created_at": "2018-10-18 03:10:34",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "input": "raw_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "raw_data.csv",
+            "target": "clean.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "clean_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "clean.R",
+            "target": "data.csv"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "raw_data.csv"
+        },
+        {
+            "name": "clean.R"
+        },
+        {
+            "name": "data.csv"
+        }
+    ],
+    "updated_at": "2018-10-18 03:10:34",
+    "url": "https://github.com/fall2018-saltz/vijet_assignment7"
+}
