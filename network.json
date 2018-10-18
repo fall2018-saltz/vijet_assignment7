@@ -1,0 +1,95 @@
+{
+    "collaborators": [
+        "vijetmuley"
+    ],
+    "created_at": "2018-10-18 03:10:34",
+    "edges": [
+        {
+            "ports": [
+                {
+                    "output": "clean_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "clean.R",
+            "target": "data.csv"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map1",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "map1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map2",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "map2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map3",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "map3.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map4",
+                    "type": "png"
+                }
+            ],
+            "source": "clean.R",
+            "target": "map4.png"
+        },
+        {
+            "ports": [
+                {
+                    "input": "raw_data",
+                    "type": "csv"
+                }
+            ],
+            "source": "scprc_est_2017_18_pop_res.csv",
+            "target": "clean.R"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "scprc_est_2017_18_pop_res.csv"
+        },
+        {
+            "assigned_to": "vijetmuley",
+            "name": "clean.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "data.csv"
+        },
+        {
+            "name": "map1.png"
+        },
+        {
+            "name": "map2.png"
+        },
+        {
+            "name": "map3.png"
+        },
+        {
+            "name": "map4.png"
+        }
+    ],
+    "updated_at": "2018-10-18 15:08:10",
+    "url": "https://github.com/fall2018-saltz/vijet_assignment7"
+}
