@@ -35,10 +35,13 @@ map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$star
 
 map1
 #------------------------------------------------------------------------------------------------------
-map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()   #Same as earlier, except now the map is filled or color coded on the basis of Murder rates.
+map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()   
+#Same as earlier, except now the map is filled or color coded on the basis of Murder rates.
+
 map2
 #------------------------------------------------------------------------------------------------------
 map3 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa) + expand_limits(x=usa$long, y=usa$lat) + geom_point(aes(x=merged$center_x,y=merged$center_y,color="red",size=merged$POPESTIMATE2017)) + coord_map()
+#Same as before,however, there is no fill now. But we are plotting points at the center of each state and the size of each point depends on the population of that state.
 map3
 #------------------------------------------------------------------------------------------------------
 nyc <- geocode(source="dsk","new york city,new york")
