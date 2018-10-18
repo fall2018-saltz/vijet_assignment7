@@ -29,11 +29,13 @@ usa <- map_data("state")                                                        
 #to plot them. The functions in addition to ggplot and following it define the type of plot (like maps in our case).
 
 map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$starea) + expand_limits(x=usa$long,y=usa$lat) + coord_map() 
+
 #geom_map is used to plot a map using ggplot. Here we are using the variable 'usa' with data for states, thus telling R what map is to be produced. The 'fill' is to color code the map on the basis of the areas of states.
 #expand_limits is to tell R what area to display in the 'Plots' section or to copy in the .png file. coord_map is to self adjust the aspect ratio as per the resolution of the display area.
+
 map1
 #------------------------------------------------------------------------------------------------------
-map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()
+map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()   #Same as earlier, except now the map is filled or color coded on the basis of Murder rates.
 map2
 #------------------------------------------------------------------------------------------------------
 map3 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa) + expand_limits(x=usa$long, y=usa$lat) + geom_point(aes(x=merged$center_x,y=merged$center_y,color="red",size=merged$POPESTIMATE2017)) + coord_map()
