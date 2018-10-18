@@ -35,6 +35,7 @@ map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$star
 
 map1
 #------------------------------------------------------------------------------------------------------
+#Step C: Create a color coded map of the U.S. on the Murder Rate for each state:
 map2 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$Murder) + expand_limits(x=usa$long,y=usa$lat) + coord_map()   
 #Same as earlier, except now the map is filled or color coded on the basis of Murder rates.
 
