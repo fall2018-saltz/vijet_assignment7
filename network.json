@@ -61,13 +61,13 @@
                     "type": "csv"
                 }
             ],
-            "source": "raw_data.csv",
+            "source": "scprc_est_2017_18_pop_res.csv",
             "target": "clean.R"
         }
     ],
     "nodes": [
         {
-            "name": "raw_data.csv"
+            "name": "scprc_est_2017_18_pop_res.csv"
         },
         {
             "assigned_to": "vijetmuley",
@@ -90,6 +90,6 @@
             "name": "map4.png"
         }
     ],
-    "updated_at": "2018-10-18 03:21:31",
+    "updated_at": "2018-10-18 15:08:10",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
