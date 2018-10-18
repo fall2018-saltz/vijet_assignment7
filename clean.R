@@ -12,7 +12,7 @@ no_arg <- function(){                                                           
 dfStates <- no_arg()  
 
 arrest <- USArrests
-merged <- merge(dfStates, arrest, by.x="NAME",by.y="row.names",all=TRUE)                                         #Merging the 2 data sets into one. The state names for both the data sets are in 'NAME' for the 1st and are row names for the 2nd.So we combine/merge the data sets by those 2 columns.
+merged <- merge(dfStates, arrest, by.x="NAME", by.y="row.names", all=TRUE)                                         #Merging the 2 data sets into one. The state names for both the data sets are in 'NAME' for the 1st and are row names for the 2nd.So we combine/merge the data sets by those 2 columns.
 merged <- merged[!(merged$NAME=="District of Columbia"),]
 
 merged["starea"] <- state.area
