@@ -34,8 +34,11 @@
         },
         {
             "name": "data.csv"
+        },
+        {
+            "name": "map1.png"
         }
     ],
-    "updated_at": "2018-10-18 03:10:34",
+    "updated_at": "2018-10-18 03:16:42",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
