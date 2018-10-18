@@ -20,6 +20,7 @@ merged["center_x"] <- state.center$x                                            
 merged["center_y"] <- state.center$y                                                                             #Adding a new column to the 'merged' data frame named 'center_y' with the y co-ordinates for the center of all states from 'state.center$y'.
 merged["state_low"] <- tolower(merged$NAME)                                                                      #Adding a new column to the 'merged' data frame named 'state_low' with the state names in lower case.
 #------------------------------------------------------------------------------------------------------
+#Step B: Generate a color coded map:
 usa <- map_data("state")
 map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$starea) + expand_limits(x=usa$long,y=usa$lat) + coord_map()
 map1
