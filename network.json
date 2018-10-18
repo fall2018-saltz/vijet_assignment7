@@ -57,7 +57,7 @@
         {
             "ports": [
                 {
-                    "input": "scprc_est_2017_18_pop_res.csv",
+                    "input": "raw_data",
                     "type": "csv"
                 }
             ],
@@ -90,6 +90,6 @@
             "name": "map4.png"
         }
     ],
-    "updated_at": "2018-10-18 03:21:04",
+    "updated_at": "2018-10-18 03:21:31",
     "url": "https://github.com/fall2018-saltz/vijet_assignment7"
 }
