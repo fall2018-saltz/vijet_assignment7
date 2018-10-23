@@ -28,7 +28,7 @@ usa <- map_data("state")                                                        
 #ggplot takes the data frame to be plotted as an argument. In addition to that there is an 'aes' aspect to it(aesthetics). It handles what the plot will look as per, i.e. the values to be plotted and where 
 #to plot them. The functions in addition to ggplot and following it define the type of plot (like maps in our case).
 #------------------------------------------------------------------------------------------------------
-map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,fill=merged$starea) + expand_limits(x=usa$long,y=usa$lat) + coord_map() 
+map1 <- ggplot(merged,aes(map_id=state_low)) + geom_map(map=usa,aes(fill=merged$starea)) + expand_limits(x=usa$long,y=usa$lat) + coord_map() 
 #------------------------------------------------------------------------------------------------------
 #geom_map is used to plot a map using ggplot. Here we are using the variable 'usa' with data for states, thus telling R what map is to be produced. The 'fill' is to color code the map on the basis of the areas of states.
 #expand_limits is to tell R what area to display in the 'Plots' section or to copy in the .png file. coord_map is to self adjust the aspect ratio as per the resolution of the display area.
